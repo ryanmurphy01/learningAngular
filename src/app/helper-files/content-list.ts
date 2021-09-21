@@ -25,7 +25,7 @@ export class ContentList{
 
     var output;
 
-    output = item.author ;
+    output = "<h1>"+item.author+"</h1>";
 
     return output;
 

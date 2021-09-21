@@ -21,7 +21,9 @@ export class ContentCardComponent implements OnInit {
      imgUrl: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80',
      type: 'book',
      title: 'Ryans Web',
-     body: 'This is ryans webpage'
+     body: 'This is ryans webpage',
+     tags: ["Student", "Male", "St.Clair College"]
+     
    }
 
    let item2: Content = {

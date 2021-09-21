@@ -25,7 +25,19 @@ export class ContentList{
 
     var output;
 
-    output = "<h1>"+item.author+"</h1>";
+    output = "<p> Id: "+ item.id + "<br>"
+
+             + "Author: " + item.author +"<br>"
+
+             + "Image Url: " + item.imgUrl +"<br>"
+
+             + "Type: " + item.type + "<br>"
+
+             + "Title: " + item.title + "<br>"
+
+             + "Body: " + item.body + "<br>"
+
+             + "Tags: " + item.tags + "</p>";
 
     return output;
 

@@ -1,3 +1,17 @@
-<div class="break-up-my-stuff">
-    <span><span [innerHTML] ="this.list.output(0)"></span></span>
-  </div>
+
+<img class="image" (click)= printid(content.id) [src]="content.imgUrl">
+<div class="content">
+ <u>Author</u><br>
+ {{content.author}}<br>
+ <u>Type</u><br>
+ {{content.type}}<br>
+ <u>Title</u><br>
+ {{content.title}}<br>
+ <u>Body</u><br>
+ {{content.body}}<br>
+ <u>Tags:</u><br>
+ {{content.tags}}<br>
+</div>
+
+
+

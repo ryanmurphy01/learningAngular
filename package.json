@@ -10,7 +10,6 @@
     "gc": "ng generate component",
     "gp": "ng generate pipe",
     "gd": "ng generate directive"
-    
   },
   "private": true,
   "dependencies": {

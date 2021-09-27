@@ -1,0 +1,24 @@
+:host{
+    background-color: #607d86;
+    display: block;
+    width: 450px;
+    height: 350px;
+    border: 2px solid #000000;
+}
+
+.image{
+    height: 348px;
+    width: 200px;
+    border: 1px solid white;
+    margin: 0 auto;
+    
+}
+
+.content{
+    color: white;
+    width: 240px;
+    font-size: 20px;
+    text-align: left;
+    float: right;
+    overflow-wrap: break-word;
+}

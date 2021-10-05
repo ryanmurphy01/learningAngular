@@ -1,9 +1,9 @@
-:host{
-    background-color: #607d86;
-    display: block;
-    width: 450px;
-    height: 350px;
-    border: 2px solid #000000;
+
+
+.content-card{
+   padding-bottom: 1px;
+
+   
 }
 
 .image{
@@ -15,10 +15,25 @@
 }
 
 .content{
+    column-count: 2;
+    column-gap: 0px;
+    background-color: #607d86;
+    border: 1px solid lightblue;
+    width: 420px;
+    height: 350px; 
     color: white;
-    width: 240px;
     font-size: 20px;
     text-align: left;
-    float: right;
     overflow-wrap: break-word;
+
 }
+
+:host.is-last{
+    border: 2px solid black;
+}
+
+
+
+
+
+

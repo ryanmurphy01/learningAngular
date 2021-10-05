@@ -12,51 +12,51 @@ export class ContentListComponent implements OnInit {
   contentArray: Content[] = [{
 
     id: 0, 
-    author: 'Ryan1',
+    author: 'Book1',
     imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Beilstein_-_Burg_Hohenbeilstein_und_Unteres_Schloss_-_Ansicht_vom_Birkenweg_mit_Abendsonne.jpg/1920px-Beilstein_-_Burg_Hohenbeilstein_und_Unteres_Schloss_-_Ansicht_vom_Birkenweg_mit_Abendsonne.jpg',
     type: 'book',
-    title: 'Ryans Web',
-    body: 'This is ryans webpage',
-    tags: ["Student", "Male", "St.Clair College"]
+    title: 'Cool Book',
+    body: 'This is a cool book',
+    tags: ["Student", "Male"]
 
    }, {
 
     id: 1,
-    author: 'Ryan2',
+    author: 'Book2',
     imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Beilstein_-_Burg_Hohenbeilstein_und_Unteres_Schloss_-_Ansicht_vom_Birkenweg_mit_Abendsonne.jpg/1920px-Beilstein_-_Burg_Hohenbeilstein_und_Unteres_Schloss_-_Ansicht_vom_Birkenweg_mit_Abendsonne.jpg',
     type: 'book',
-    title: 'Ryans Web',
-    body: 'This is ryans webpage',
-    tags: ["Student", "Male", "St.Clair College","Test"]
+    title: 'cool book 2',
+    body: 'This is also a cool book',
+    tags: ["Student", "Male","Test"]
 
    }, {
 
     id: 2,
-    author: 'Ryan3',
+    author: 'Book3',
     imgUrl: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80',
     type: 'book',
-    title: 'Ryans Web',
-    body: 'This is ryans webpage',
-    tags: ["Student", "Male", "St.Clair College"]
+    title: 'Web',
+    body: 'This is a book',
+    tags: ["Student", "Male"]
    }, {
 
    id: 3,
-   author: 'Ryan4',
+   author: 'Book4',
    imgUrl: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80',
    type: 'book',
-   title: 'Ryans Web',
-   body: 'This is ryans webpage',
-   tags: ["Student", "Male", "St.Clair College"]
+   title:  'Web',
+   body: 'This is webpage',
+   tags: ["Student", "Male"]
    
    }, {
 
    id: 4,
-    author: 'Ryan5',
+    author: 'Book5',
     imgUrl: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80',
     type: 'book',
-    title: 'Ryans Web',
-    body: 'This is ryans webpage',
-    tags: ["Student", "Male", "St.Clair College"]
+    title: 'Web',
+    body: 'This is a book',
+    tags: ["Student", "Male"]
 
    
    }];

@@ -1,6 +1,8 @@
+<div class = "content-card">
 
-<img class="image" (click)= printid(content.id) [src]="content.imgUrl">
 <div class="content">
+ <img class="image" (click)= printid(content.id) [src]="content.imgUrl">
+ <body>
  <u>Author</u><br>
  {{content.author}}<br>
  <u>Type</u><br>
@@ -11,7 +13,8 @@
  {{content.body}}<br>
  <u>Tags:</u><br>
  {{content.tags}}<br>
+</body>
 </div>
-
+</div>
 
 

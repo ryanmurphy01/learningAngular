@@ -6,8 +6,8 @@ import { Content } from '../app/helper-files/content-interface';
 })
 export class ArticleTypePipe implements PipeTransform {
 
-   transform(contentList: Content[]): Content[]{
-    return contentList.filter(c => c.type == "article");
+   transform(contentList: Content[], type: string): Content[]{
+    return contentList.filter(item => item.type == type);
   }
 
 }

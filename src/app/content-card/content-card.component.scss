@@ -14,11 +14,11 @@
     
 }
 
-.content{
+:host{
     column-count: 2;
     column-gap: 0px;
     background-color: #607d86;
-    border: 1px solid lightblue;
+    display: block;
     width: 420px;
     height: 350px; 
     color: white;
@@ -30,6 +30,19 @@
 
 :host.is-last{
     border: 2px solid black;
+}
+
+:host.highlight-me{
+  border: 2px solid lime;
+
+}
+
+:host.Article{
+    border: 2px solid orange;
+}
+
+:host.Book{
+    border: 2px solid purple;
 }
 
 

@@ -1,8 +1,20 @@
 
+<form onsubmit="return false;">
+ <input #checkTitle>
+ <button type="submit" (click)="checkIfTitleExists(checkTitle.value)">Does it exist</button>
+</form>
+
+<div class="title-check">
+    {{ message }}
+</div>
+
 <!--<app-content-card *ngFor="let item of contentArray; index as i; first as isFirst" [content]="item"
 [class.is-first]="isFirst" class="content-{{i}}"></app-content-card> -->
 
 
-<app-content-card *ngFor="let item of (contentArray | defaultType)" [content]="item"></app-content-card>
+<app-content-card *ngFor="let item of contentArray | articleType: 'Article'; last as isLast" [class.is-last]="isLast" [content]="item"
+[class.highlight-me]="checkTitle.value === item.title" class="Article"></app-content-card>
 
-<app-content-card *ngFor="let item of (contentArray | articleType)" [content]="item"></app-content-card>
+<app-content-card *ngFor="let item of contentArray | articleType: 'Book'; last as isLast" [class.is-last]="isLast" [content]="item"
+[class.highlight-me]="checkTitle.value === item.title" class="Book"></app-content-card>
+

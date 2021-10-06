@@ -18,6 +18,7 @@
     column-count: 2;
     column-gap: 0px;
     background-color: #607d86;
+    margin: 20px auto;
     display: block;
     width: 420px;
     height: 350px; 
@@ -25,7 +26,18 @@
     font-size: 20px;
     text-align: left;
     overflow-wrap: break-word;
+    
 
+}
+
+
+
+:host.Article{
+    border: 2px solid orange;
+}
+
+:host.Book{
+    border: 2px solid purple;
 }
 
 :host.is-last{
@@ -36,16 +48,6 @@
   border: 2px solid lime;
 
 }
-
-:host.Article{
-    border: 2px solid orange;
-}
-
-:host.Book{
-    border: 2px solid purple;
-}
-
-
 
 
 

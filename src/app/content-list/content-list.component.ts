@@ -74,7 +74,7 @@ export class ContentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log(this.contentArray)
   }
 
   checkIfTitleExists(title: string): void{
@@ -89,5 +89,16 @@ export class ContentListComponent implements OnInit {
     
 
   }
+
+   addBookToList(newBookFromChild: Content){
+    this.contentArray.push(newBookFromChild);
+    this.contentArray = Object.assign([], this.contentArray);
+  }
+
+ 
+
+ 
+
+    
 
 }

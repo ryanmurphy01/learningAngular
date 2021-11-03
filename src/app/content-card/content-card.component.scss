@@ -33,19 +33,19 @@
 
 
 :host.Article{
-    border: 2px solid orange;
+    border: 5px solid orange;
 }
 
 :host.Book{
-    border: 2px solid purple;
+    border: 5px solid purple;
 }
 
 :host.is-last{
-    border: 2px solid black;
+    border: 5px solid black;
 }
 
 :host.highlight-me{
-  border: 2px solid lime;
+  border: 5px solid lime;
 
 }
 

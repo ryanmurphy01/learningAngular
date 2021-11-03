@@ -8,6 +8,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { DefaultTypePipe } from './default-type.pipe';
 import { ArticleTypePipe } from './article-type.pipe';
 import { HoverStyleDirective } from './hover-style.directive';
+import { CreateContentComponent } from './create-content/create-content.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HoverStyleDirective } from './hover-style.directive';
     ContentListComponent,
     DefaultTypePipe,
     ArticleTypePipe,
-    HoverStyleDirective
+    HoverStyleDirective,
+    CreateContentComponent
   ],
   imports: [
     BrowserModule

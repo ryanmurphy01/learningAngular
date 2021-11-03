@@ -17,22 +17,39 @@ export class CreateContentComponent implements OnInit {
   }
 
   @Output() newBookEvent = new EventEmitter<Content>();
-  newBookItem!: Content;
-  itemCreated: boolean = true;
+  message: any;
+
   
- addBook(author: string, imgUrl: string, type: string, title: string, body: string, tags: [string] ): void{
-  
-      let itemCreate = true;
-      this.newBookItem = {
-        author: author,
-        imgUrl: imgUrl,
-        type: type,
-        title: title,
-        body: body,
-        tags: tags
-  
+ addBook(id: any, author: string, imgUrl: string, type: string, title: string, body: string, tags: [string] ): void{
+   let addContentPromise = new Promise((success, fail) =>{
+      if(id&& author && title && body){
+        this.newBookEvent.emit({
+          id,
+          author,
+          imgUrl,
+          type,
+          title,
+          body,
+          tags
+        })
+        success("Content added!")
+      } else{
+        fail("Can't add the content without all the required fields set")
       }
-      this.newBookEvent.emit(this.newBookItem)
+
+   });
+
+   addContentPromise.then((msg) =>{
+     console.log(msg)
+     this.message = "";
+   }).catch((msg) =>{
+     console.log(msg)
+     this.message = msg;
+   }
+     
+   );
+
+      
     
     
   }

@@ -1,4 +1,7 @@
+
+<div class="form">
 <form onsubmit="return false;">
+    Id:<input #id><br>
     Author:<input #author><br>
     ImgUrl:<input #imgUrl><br>
     Type:<input #type><br>
@@ -6,7 +9,10 @@
     Body:<input #body><br>
     Tags:<input #tags><br>
 
-    <button type="submit" (click)="addBook(author.value, imgUrl.value, type.value, title.value, body.value, [tags.value])">Add Book</button>
-
+    <button type="submit" (click)="addBook(id.value, author.value, imgUrl.value, type.value, title.value, body.value, [tags.value])">Add Book</button>
+    <div class="error">
+        <div [innerHTML]="message"></div>
+    </div>
 
 </form>
+</div>

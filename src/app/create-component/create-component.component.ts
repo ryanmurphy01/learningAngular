@@ -9,6 +9,8 @@ import { Content } from '../helper-files/content-interface';
 })
 export class CreateComponentComponent implements OnInit {
 
+  content: Content[] = []
+
   constructor(private contentService: ContentService) { }
 
   ngOnInit(): void {

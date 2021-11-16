@@ -1,0 +1,16 @@
+
+<div class="form">
+    <form onsubmit="return false;">
+        Id:<input #id><br>
+        Author:<input #author><br>
+        ImgUrl:<input #imgUrl><br>
+        Type:<input #type><br>
+        Title:<input #title><br>
+        Body:<input #body><br>
+        Tags:<input #tags><br>
+    
+        <button type="submit" (click)= "save(id.value, author.value, imgUrl.value, type.value, title.value, body.value, [tags.value])">Add Book</button>
+
+    
+    </form>
+    </div>

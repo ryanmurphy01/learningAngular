@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../content.service';
 import { Content } from '../helper-files/content-interface';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-create-component',
@@ -19,7 +20,7 @@ export class CreateComponentComponent implements OnInit {
     tags: ["default"]
   } 
 
-  constructor(private contentService: ContentService) { }
+  constructor(private contentService: ServiceService) { }
 
   ngOnInit(): void {
     this.contentService.getContent().subscribe(
@@ -42,7 +43,10 @@ export class CreateComponentComponent implements OnInit {
     }
     console.log(this.contentItem)
 
-    this.contentService.addContent(this.contentItem).subscribe(content => this.content.push(content));
+    this.contentService.addContent(this.contentItem).subscribe(content => {
+      this.content.push(content);
+      this.content = [...this.content]
+    });
   }
 
   update(): void{

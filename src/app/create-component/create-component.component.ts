@@ -28,7 +28,7 @@ export class CreateComponentComponent implements OnInit {
       tags: tags
     }
 
-    this.contentService.addContent(contentItem).subscribe(content => this.content.push(content))
+    this.contentService.addContent(contentItem).subscribe(contentItem => this.content.push(contentItem))
   }
 
   

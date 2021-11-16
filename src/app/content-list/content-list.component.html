@@ -10,12 +10,14 @@
 
 <app-create-component></app-create-component>
 
-
+<app-content-card *ngfor="let item of content; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"
+class="content-{{i}}"></app-content-card>
 
 
 <app-content-card *ngFor="let item of content; last as isLast" [class.is-last]="isLast" [content]="item"
 [class.highlight-me]="checkTitle.value === item.title" class="Article"></app-content-card>
 
-<app-content-card *ngFor="let item of content | articleType: 'Book'; last as isLast" [class.is-last]="isLast" [content]="item"
-[class.highlight-me]="checkTitle.value === item.title" class="Book"></app-content-card>
+<!--<app-content-card *ngFor="let item of content | articleType: 'Book'; last as isLast" [class.is-last]="isLast" [content]="item"
+[class.highlight-me]="checkTitle.value === item.title" class="Book"></app-content-card> --> 
+
 

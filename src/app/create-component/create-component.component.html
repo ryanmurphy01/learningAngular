@@ -1,16 +1,39 @@
-
-<div class="form">
-    <form onsubmit="return false;">
-        Id:<input #id><br>
-        Author:<input #author><br>
-        ImgUrl:<input #imgUrl><br>
-        Type:<input #type><br>
-        Title:<input #title><br>
-        Body:<input #body><br>
-        Tags:<input #tags><br>
-    
-        <button type="submit" (click)= "save(id.value, author.value, imgUrl.value, type.value, title.value, body.value, [tags.value])">Add Book</button>
-
-    
-    </form>
-    </div>
+<div>
+    <label>
+        Id: <input [(ngModel)]="tempId">
+    </label>
+</div>
+<div>
+    <label>
+        Author: <input [(ngModel)]="newContent.author">
+    </label>
+</div>
+<div>
+    <label>
+        imgUrl: <input [(ngModel)]="newContent.imgUrl">
+    </label>
+</div>
+<div>
+    <label>
+        Type: <input [(ngModel)]="newContent.type">
+    </label>
+</div>
+<div>
+    <label>
+        Title: <input [(ngModel)]="newContent.title">
+    </label>
+</div>
+<div>
+    <label>
+        Body: <input [(ngModel)]="newContent.body">
+    </label>
+</div>
+<div>
+    <label>
+        Tags: <input [(ngModel)]="tempTags">
+    </label>
+</div>
+<div>
+    <button (click)="addContent()">Add Book</button>
+    <button (click)="updateContent()">Update Book</button>
+</div>

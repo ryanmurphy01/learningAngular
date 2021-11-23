@@ -13,6 +13,7 @@ import { CreateComponentComponent } from './create-component/create-component.co
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { InMemoryDataService } from './in-memory-data.service';
       InMemoryDataService, {
         dataEncapsulation: false,
         delay: 1000
-      })
+      }), 
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

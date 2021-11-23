@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { ContentService } from '../content.service';
 import { Content } from '../helper-files/content-interface';
+import { MessageService } from '../message.service';
 import { ServiceService } from '../service.service';
 
 @Component({
@@ -9,6 +10,14 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./create-component.component.scss']
 })
 export class CreateComponentComponent implements OnInit {
+
+  @Output() addContentEvent = new EventEmitter<Content>();
+  @Output() updateContentEvent = new EventEmitter<Content>();
+
+  newContent: Content;
+  tempId!: string;
+  tempTags!: string;
+  
 
   content: Content[] = [];
   contentItem: Content = {
@@ -20,39 +29,50 @@ export class CreateComponentComponent implements OnInit {
     tags: ["default"]
   } 
 
-  constructor(private contentService: ServiceService) { }
-
-  ngOnInit(): void {
-    this.contentService.getContent().subscribe(
-      content => {
-        this.content = content;
-      }
-    )
-  }
-
-  save(id: any, author: string, imgUrl: string, type: string, title: string, body: string, tags: [string]): void {
-    
-    this.contentItem = {
-      id: id,
-      author: author,
-      imgUrl: imgUrl,
-      type: type,
-      title: title,
-      body: body,
-      tags: tags
+  constructor(private contentService: ServiceService, private messageService: MessageService) {
+    this.newContent = {
+      author: "",
+      type: "",
+      title: "",
+      body: ""
+      
     }
-    console.log(this.contentItem)
+   }
 
-    this.contentService.addContent(this.contentItem).subscribe(content => {
-      this.content.push(content);
-      this.content = [...this.content]
+  ngOnInit(): void {}
+
+    addContent(): void{
+    this.newContent.tags = this.tempTags.split(",");
+    this.contentService.addContent(this.newContent).subscribe(content =>{
+      this.messageService.add("Added content has an id of: " + this.newContent.id);
+      this.addContentEvent.emit(this.newContent);
+      this.newContent = {
+        author: "",
+        type: "",
+        title: "",
+        body: ""
+      };
+
+      this.tempTags = "";
+      
     });
   }
 
-  update(): void{
-    this.content[this.contentItem.id || 0] = this.contentItem
-    this.contentService.updateContent(this.contentItem).subscribe(() => {
-      console.log("Content Updated:")
+
+  updateContent(): void{
+    this.newContent.tags = this.tempTags.split(",");
+    this.newContent.id = parseInt(this.tempId);
+    this.contentService.addContent(this.newContent).subscribe(() => {
+      this.messageService.add("Updated content at id: " + this.newContent.id);
+      this.tempTags = "";
+      this.tempId = "";
+      this.updateContentEvent.emit(this.newContent)
+      this.newContent = {
+        author: "",
+        type: "",
+        title: "",
+        body: ""
+      }
     });
 
   }

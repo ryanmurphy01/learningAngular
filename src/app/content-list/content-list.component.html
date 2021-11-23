@@ -8,10 +8,8 @@
    <!-- {{ message }} -->
 </div>
 
-<app-create-component></app-create-component>
+<app-create-component (addContentEvent)="addContentToList($event)" (updateContentEvent)="updateContentToList($event)"></app-create-component>
 
-<app-content-card *ngfor="let item of content; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"
-class="content-{{i}}"></app-content-card>
 
 
 <app-content-card *ngFor="let item of content; last as isLast" [class.is-last]="isLast" [content]="item"

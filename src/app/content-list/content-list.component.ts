@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { ServiceService } from '../service.service';
+import { ContentService } from '../content.service';
 
 @Component({
   selector: 'app-content-list',
@@ -8,18 +9,20 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-  content: Content[] = [];
+  content: Content [] = [];
 
   constructor(private ServiceService: ServiceService){
 
   }
 
   ngOnInit(): void {
+    this.getContent()
+  }
 
-    //this.content = this.ServiceService.getContent();
-    this.ServiceService.getContentObs().subscribe(content =>
-      this.content = content);
-
+  getContent(): void {
+    this.ServiceService.getContent().subscribe(contentList => {
+      this.content = contentList;
+    })
   }
 
   checkIfTitleExists(title: string): void{
@@ -34,5 +37,18 @@ export class ContentListComponent implements OnInit {
     
 
   }
+
+  addContentToList(newContent: any): void {
+    this.content.push(newContent);
+    this.content = [...this.content];
+  }
+
+  updateContentToList(newContent: any): void {
+    let bookIndex = this.content.map(e => e.id).indexOf(newContent.id)
+    this.content[bookIndex] = newContent;
+    this.content = [...this.content];
+  }
+
+  
 
 }

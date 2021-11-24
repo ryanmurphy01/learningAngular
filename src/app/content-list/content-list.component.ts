@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { ServiceService } from '../service.service';
 import { ContentService } from '../content.service';
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog"
+import { CreateComponentComponent } from '../create-component/create-component.component';
 
 @Component({
   selector: 'app-content-list',
@@ -11,7 +13,7 @@ import { ContentService } from '../content.service';
 export class ContentListComponent implements OnInit {
   content: Content [] = [];
 
-  constructor(private ServiceService: ServiceService){
+  constructor(private ServiceService: ServiceService, private MatDialog: MatDialog){
 
   }
 
@@ -49,6 +51,13 @@ export class ContentListComponent implements OnInit {
     this.content = [...this.content];
   }
 
+  openDialog(){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    this.MatDialog.open(CreateComponentComponent, dialogConfig);
+  }
+  
   
 
 }

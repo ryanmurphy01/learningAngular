@@ -11,9 +11,12 @@ import { HoverStyleDirective } from './hover-style.directive';
 import { CreateComponentComponent } from './create-component/create-component.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { HttpClientInMemoryWebApiModule, InMemoryDbService } from 'angular-in-memory-web-api';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { FormsModule } from '@angular/forms';
         dataEncapsulation: false,
         delay: 1000
       }), 
-      FormsModule
+      FormsModule, BrowserAnimationsModule,
+      
   ],
   providers: [],
   bootstrap: [AppComponent]

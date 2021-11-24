@@ -1,14 +1,18 @@
 <div class="form">
 <form>
- <input #checkTitle>
- <button type="submit" (click)="checkIfTitleExists(checkTitle.value)">Does it exist</button>
+   <mat-form-field>
+ <input matInput #checkTitle>
+</mat-form-field>
+ <button mat-raised-button color="primary" type="submit" (click)="checkIfTitleExists(checkTitle.value)">Does it exist</button>
 </form>
 </div>
 <div class="title-check">
    <!-- {{ message }} -->
 </div>
+<button mat-raised-button color="primary" (click)="openDialog()">Add Book</button>
+<button mat-raised-button color="accent" (click)="openDialog()">Update Book</button>
 
-<app-create-component (addContentEvent)="addContentToList($event)" (updateContentEvent)="updateContentToList($event)"></app-create-component>
+<!--<app-create-component (addContentEvent)="addContentToList($event)" (updateContentEvent)="updateContentToList($event)"></app-create-component> -->
 
 
 

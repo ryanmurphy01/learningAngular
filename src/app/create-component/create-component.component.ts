@@ -3,6 +3,7 @@ import { ContentService } from '../content.service';
 import { Content } from '../helper-files/content-interface';
 import { MessageService } from '../message.service';
 import { ServiceService } from '../service.service';
+import { MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material/dialog"
 
 @Component({
   selector: 'app-create-component',
@@ -29,7 +30,10 @@ export class CreateComponentComponent implements OnInit {
     tags: ["default"]
   } 
 
-  constructor(private contentService: ServiceService, private messageService: MessageService) {
+  constructor(private contentService: ServiceService, private messageService: MessageService, private matDialog: MatDialog,
+    public dialogRef: MatDialogRef<CreateComponentComponent>) {
+
+
     this.newContent = {
       author: "",
       type: "",
@@ -56,6 +60,7 @@ export class CreateComponentComponent implements OnInit {
       this.tempTags = "";
       
     });
+    this.dialogRef.close();
   }
 
 
@@ -74,8 +79,10 @@ export class CreateComponentComponent implements OnInit {
         body: ""
       }
     });
-
+    this.dialogRef.close();
   }
+
+
 
   
   

@@ -1,39 +1,63 @@
 <div>
-    <label>
-        Id: <input [(ngModel)]="tempId">
-    </label>
-</div>
+<mat-form-field>
 <div>
     <label>
-        Author: <input [(ngModel)]="newContent.author">
+        Id: <input matInput [(ngModel)]="tempId">
     </label>
 </div>
+</mat-form-field>
+<br>
+<mat-form-field>
 <div>
     <label>
-        imgUrl: <input [(ngModel)]="newContent.imgUrl">
+        Author: <input matInput [(ngModel)]="newContent.author">
     </label>
 </div>
+</mat-form-field>
+<br>
+<mat-form-field>
 <div>
     <label>
-        Type: <input [(ngModel)]="newContent.type">
+        imgUrl: <input matInput [(ngModel)]="newContent.imgUrl">
     </label>
 </div>
+</mat-form-field>
+<br>
+<mat-form-field>
 <div>
     <label>
-        Title: <input [(ngModel)]="newContent.title">
+        Type: <input matInput [(ngModel)]="newContent.type">
     </label>
 </div>
+</mat-form-field>
+<br>
+<mat-form-field>
 <div>
     <label>
-        Body: <input [(ngModel)]="newContent.body">
+        Title: <input matInput [(ngModel)]="newContent.title">
     </label>
 </div>
+</mat-form-field>
+<br>
+<mat-form-field>
 <div>
     <label>
-        Tags: <input [(ngModel)]="tempTags">
+        Body: <input matInput [(ngModel)]="newContent.body">
     </label>
 </div>
+</mat-form-field>
+<br>
+
+<mat-form-field>
 <div>
-    <button (click)="addContent()">Add Book</button>
-    <button (click)="updateContent()">Update Book</button>
+    <label>
+        Tags: <input matInput [(ngModel)]="tempTags">
+    </label>
+</div>
+</mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="addContent()">Add Book</button>
+    <button mat-raised-button color="accent" (click)="updateContent()">Update Book</button>
 </div>

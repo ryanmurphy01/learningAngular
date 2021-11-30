@@ -8,7 +8,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { DefaultTypePipe } from './default-type.pipe';
 import { ArticleTypePipe } from './article-type.pipe';
 import { HoverStyleDirective } from './hover-style.directive';
-import { CreateComponentComponent } from './create-component/create-component.component';
+import { CreateComponentComponent, CreateDialogComponent } from './create-component/create-component.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -16,9 +16,10 @@ import { HttpClientInMemoryWebApiModule, InMemoryDbService } from 'angular-in-me
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule } from '@angular/material/button'
+import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatDialog, MatDialogModule} from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 
@@ -31,7 +32,8 @@ import { MatDialog, MatDialogModule} from '@angular/material/dialog'
     DefaultTypePipe,
     ArticleTypePipe,
     HoverStyleDirective,
-    CreateComponentComponent
+    CreateComponentComponent,
+    CreateDialogComponent
   ],
   imports: [
     BrowserModule,

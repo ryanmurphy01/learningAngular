@@ -1,0 +1,63 @@
+<div>
+    <mat-form-field>
+    <div>
+        <label>
+            Id: <input matInput [(ngModel)]="tempId">
+        </label>
+    </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+    <div>
+        <label>
+            Author: <input matInput [(ngModel)]="data.author">
+        </label>
+    </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+    <div>
+        <label>
+            imgUrl: <input matInput [(ngModel)]="data.imgUrl">
+        </label>
+    </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+    <div>
+        <label>
+            Type: <input matInput [(ngModel)]="data.type">
+        </label>
+    </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+    <div>
+        <label>
+            Title: <input matInput [(ngModel)]="data.title">
+        </label>
+    </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+    <div>
+        <label>
+            Body: <input matInput [(ngModel)]="data.body">
+        </label>
+    </div>
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field>
+    <div>
+        <label>
+            Tags: <input matInput [(ngModel)]="tempTags">
+        </label>
+    </div>
+    </mat-form-field>
+    
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button color="primary" (click)="addContent()" [mat-dialog-close]="data">Add Book</button>
+        <button mat-raised-button color="accent" (click)="updateContent()">Update Book</button>
+    </div>

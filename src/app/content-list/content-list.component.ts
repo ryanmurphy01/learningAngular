@@ -56,6 +56,7 @@ export class ContentListComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     this.MatDialog.open(CreateComponentComponent, dialogConfig);
+    data: this.content
   }
   
   

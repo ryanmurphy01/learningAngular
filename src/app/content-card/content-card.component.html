@@ -1,5 +1,6 @@
 <div class = "content-card">
 
+
 <div class="content">
  <img class="image" (click)= printid(content.id) [src]="content.imgUrl" *ngIf="content.imgUrl else imageDefault">
 <ng-template #imageDefault>
@@ -33,7 +34,11 @@
  </span>
  </div> 
 
+ <a [routerLink]="['/content', content.id]"
+routerLinkActive="active">Content Details</a>
+
 </div>
+
 
 
 </div>

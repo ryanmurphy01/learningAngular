@@ -30,6 +30,10 @@ export class ServiceService {
 
   }
 
+  getContentItem(id: number): Observable<Content>{
+    return this.http.get<Content>("api/content/" + id);
+  }
+
   addContent(content: Content): Observable<Content>{
     return this.http.post<Content>("api/content", content, this.httpOptions);
   }

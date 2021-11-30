@@ -7,10 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<div class="messages">
-<h2>Messages</h2>
-<div *ngFor='let message of messageService.messages'> {{message}}</div>
-</div>
 
 
-<app-content-list></app-content-list>
+<a routerLink="content" routerLinkActive="active">ContentList</a><br>
+<router-outlet></router-outlet>

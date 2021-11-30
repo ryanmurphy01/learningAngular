@@ -19,6 +19,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DetailsComponent } from './details/details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+import { RouterModule } from '@angular/router';
+
+
 
 
 
@@ -33,7 +39,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     ArticleTypePipe,
     HoverStyleDirective,
     CreateComponentComponent,
-    CreateDialogComponent
+    CreateDialogComponent,
+    DetailsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +51,13 @@ import { MatDialogModule } from '@angular/material/dialog';
         dataEncapsulation: false,
         delay: 1000
       }), 
-      FormsModule, BrowserAnimationsModule, MatInputModule, MatButtonModule, MatDialogModule
+      FormsModule, BrowserAnimationsModule, MatInputModule, MatButtonModule, MatDialogModule,
+      RouterModule.forRoot([
+        { path: 'content/:id', component: DetailsComponent },
+        { path: 'content', component: ContentListComponent},
+        { path: '', component: AppComponent},
+        { path: "**", component: NotFoundComponent}
+      ])
       
   ],
   providers: [],

@@ -10,7 +10,9 @@ import { MessageService } from './message.service';
 export class AppComponent  {
   title = 'learning-angular';
 
-  constructor(public messageService: MessageService, private logServ: LogUpdateService){}
+  constructor(public messageService: MessageService, private logServ: LogUpdateService){
+    // logServ.runSnackbar();
+  }
   
 }
 

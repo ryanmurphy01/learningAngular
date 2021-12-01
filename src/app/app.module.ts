@@ -26,6 +26,8 @@ import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 
@@ -48,6 +50,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     HttpClientModule,
+    MatSnackBarModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {
         dataEncapsulation: false,

@@ -56,8 +56,7 @@ import { environment } from '../environments/environment';
       FormsModule, BrowserAnimationsModule, MatInputModule, MatButtonModule, MatDialogModule,
       RouterModule.forRoot([
         { path: 'content/:id', component: DetailsComponent },
-        { path: 'content', component: ContentListComponent},
-        { path: '', component: AppComponent},
+        { path: '', component: ContentListComponent},
         { path: "**", component: NotFoundComponent}, 
       ]),
       ServiceWorkerModule.register('ngsw-worker.js', {

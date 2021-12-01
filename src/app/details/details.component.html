@@ -1,5 +1,13 @@
 
-Title: {{content.title}}<br>
-Author: {{content.author}}<br>
-Type: {{content.type}}<br>
-Body: {{content.body}}<br>
+<h1>Content Details</h1>
+
+<div class="details">
+<h2>Title</h2> <p>{{content.title}}</p><br>
+<h2>Author</h2> <p>{{content.author}}</p><br>
+<h2>Type</h2> <p>{{content.type}}</p><br>
+<h2>Body</h2> <p>{{content.body}}</p><br>
+</div>
+
+<div class="link">
+<a [routerLink]="['/']" >Return</a>
+</div>
